@@ -10,16 +10,16 @@ export class SheetService {
 
    }
    get(){
-     this.http.get(`${this.url}/api/diaries`).subscribe((val)=>{console.log(val)})
+     this.http.get('/api/diaries').subscribe((val)=>{console.log(val)})
    }
    set(){
-     this.http.post(`${this.url}/api/setsheet`,{"id":1,"insumo":"algun"}).subscribe({
+     this.http.post('/api/setsheet',{"id":1,"insumo":"algun"}).subscribe({
       next: data => {
           console.log(data);
       },
       error: error => {
           
-          console.error('There was an error!', error);
+          console.error('agun puto error!', error);
       }
   })
    }
