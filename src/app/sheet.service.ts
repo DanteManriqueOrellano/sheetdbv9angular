@@ -14,10 +14,13 @@ export class SheetService {
    }
 
    set(){
-     const jo = {"id":"1","insumo":"hola","umedida":"kg","categoria":"hola"}
+    const jo = {"id":"1","insumo":"hola","umedida":"kg","categoria":"hola"};
+    
     const headers:HttpHeaders = new HttpHeaders()
     .set('content-type', 'application/json')
-    .set('Access-Control-Allow-Origin', '*'); 
+    .set('Access-Control-Allow-Origin', '*')
+    ; 
+
      this.http.post('/api/sheet/newrow',jo,{"headers":headers}).subscribe({
       next: der => {
           console.log(der);
