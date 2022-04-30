@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http'
+import {HttpClient, HttpHeaders} from '@angular/common/http'
 @Injectable({
   providedIn: 'root'
 })
@@ -14,9 +14,13 @@ export class SheetService {
    }
 
    set(){
-     this.http.post('/api/sheet/newrow',{"id":1,"insumo":"algun"}).subscribe({
-      next: data => {
-          console.log(data);
+     const jo = {"id":"1","insumo":"hola","umedida":"kg","categoria":"hola"}
+    const headers:HttpHeaders = new HttpHeaders()
+    .set('content-type', 'application/json')
+    .set('Access-Control-Allow-Origin', '*'); 
+     this.http.post('/api/sheet/newrow',jo,{"headers":headers}).subscribe({
+      next: der => {
+          console.log(der);
       },
       error: error => {
           
