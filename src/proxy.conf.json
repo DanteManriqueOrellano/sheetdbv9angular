@@ -1,6 +1,6 @@
 {
     "/api/*": {
-    "target": "https://sheetdbv9angular.herokuapp.com/",
+    "target": "http://localhost:3000/",
     "secure": true,
     "pathRewrite": {
         "^/posts": ""

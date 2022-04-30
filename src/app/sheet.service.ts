@@ -12,8 +12,9 @@ export class SheetService {
    get(){
      this.http.get('/api/diaries').subscribe((val)=>{console.log(val)})
    }
+
    set(){
-     this.http.post('/api/setsheet',{"id":1,"insumo":"algun"}).subscribe({
+     this.http.post('/api/sheet/newrow',{"id":1,"insumo":"algun"}).subscribe({
       next: data => {
           console.log(data);
       },
