@@ -2,6 +2,9 @@
     "/api/*": {
     "target": "https://sheetdbv9angular.herokuapp.com/",
     "secure": true,
+    "pathRewrite": {
+        "^/posts": ""
+    },
     "logLevel": "debug",
     "changeOrigin":true
     }
