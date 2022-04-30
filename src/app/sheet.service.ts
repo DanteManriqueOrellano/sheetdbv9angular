@@ -4,16 +4,16 @@ import {HttpClient} from '@angular/common/http'
   providedIn: 'root'
 })
 export class SheetService {
-  public url = 'https://sheetdbv9express.herokuapp.com'
+  
 
   constructor(private http:HttpClient) {
 
    }
    get(){
-     this.http.get('api/diaries').subscribe((val)=>{console.log(val)})
+     this.http.get('diaries').subscribe((val)=>{console.log(val)})
    }
    set(){
-     this.http.post('api/setsheet',{"id":1,"insumo":"algun"}).subscribe({
+     this.http.post('setsheet',{"id":1,"insumo":"algun"}).subscribe({
       next: data => {
           console.log(data);
       },
