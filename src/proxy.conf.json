@@ -1,6 +1,6 @@
 {
     "/api/*": {
-    "target": "https://sheetdbv9angular.herokuapp.com/",
+    "target": "https://sheetdbv9express.herokuapp.com/",
     "secure": true,
     "pathRewrite": {
         "^/posts": ""
