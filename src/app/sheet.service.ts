@@ -21,7 +21,7 @@ export class SheetService {
     .set('Access-Control-Allow-Origin', '*')
     ; 
 
-     this.http.post('/api/sheet/newrow',jo,{"headers":headers}).subscribe({
+     this.http.post('/api/sheet/newrow',jo).subscribe({
       next: der => {
           console.log(der);
       },

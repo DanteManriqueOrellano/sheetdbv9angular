@@ -3,7 +3,7 @@
     "target": "https://sheetdbv9express.herokuapp.com/",
     "secure": false,
     "pathRewrite": {
-        "^/posts": ""
+        "^/api": ""
     },
     "logLevel": "debug",
     "changeOrigin":true
