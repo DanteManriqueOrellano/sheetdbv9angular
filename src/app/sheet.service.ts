@@ -21,7 +21,7 @@ export class SheetService {
     .set('Access-Control-Allow-Origin', '*')
     ; 
 
-     this.http.post('/api/sheet/newrow',jo).subscribe({
+     this.http.post('https://sheetdbv9express.herokuapp.com/api/sheet/newrow',jo).subscribe({
       next: der => {
           console.log(der);
       },
